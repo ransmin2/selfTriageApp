@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advice Form</title>
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+    <a class="navbar-brand" href="/">
+        <img src="images/SelfTr.png" alt="Your Logo">
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<!-- Main Content -->
+<main class="main-content">
+    <!-- Home Screen -->
+    <div class="position-relative text-center" id="homeScreen">
+        <img src="images/medai2.jpg" alt="Image Description" class="img-fluid w-100">
+        <div class="overlay-content">
+            <div class="info-box">
+                <h1>Welcome to SelfTriageApp</h1>
+                <br>
+                <p>Fast, trusted advice at your fingertips — Navigate your health symptoms with ease!</p>
+                <br>
+                <button class="btn btn-custom btn-lg">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5" id="mainContent" style="display: none;">
+        <!-- Content below the navbar -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="card card-custom p-4">
+
+                        <!-- Input Section -->
+                        <div id="inputSection">
+                            <form id="adviceForm">
+                                <div class="form-group">
+                                <label for="symptom">Describe your symptom:</label>
+                                <textarea class="form-control" id="symptom" name="symptom" rows="4" required
+                                          placeholder="E.g., Persistent cough for two days and Fever"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-custom btn-lg">Get Advice</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Output Section -->
+                    <div id="outputSection" style="display: none;">
+                        <h2 class="text-center my-4">Recommended Action:</h2>
+                        <!-- <p id="adviceIntro" class="lead text-center"></p> -->
+                        <p class="lead text-center"><span id="adviceOutput"></span>|</p>
+                        <ul id="adviceList" class="list-group"></ul>
+                        <div class="text-center mt-4">
+                            <button class="btn btn-custom btn-lg" onclick="resetForm()">Describe Another Symptom
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login to Continue</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-custom" id="loginButton">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="footer bg-light ">
+    <div class="container text-center py-3">
+        <div>
+            <a href="#" class="text-secondary mx-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-secondary mx-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-secondary mx-2"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="mt-2">
+            &copy; 2023 Back in Action Team. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Add Bootstrap JS and Popper.js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="js/app.js"></script>
+</body>
+</html>
